@@ -1,4 +1,4 @@
-//#include <titanone.gph>
+#include <titanone.gph>
 
 // Script to use a DGOC-44U controller or modded DdGO! Plug and Play with Densha de GO! games for the PS1/PS2 on emulators or real hardware
 // Written by Marc Riera, 2022
@@ -9,8 +9,8 @@
 unmap PS4_PS;
 remap PS4_SQUARE -> PS4_CROSS;
 remap PS4_CROSS -> PS4_SQUARE;
-remap PS4_RX -> PS4_LX;
-remap PS4_RY -> PS4_LY;
+//remap PS4_RX -> PS4_LX;
+//remap PS4_RY -> PS4_LY;
 unmap PS4_RX;
 unmap PS4_RY;
 
@@ -88,7 +88,7 @@ main {
     if (get_val(HID_STICK_2_X) == 8) {  // B1
         brakeNotch = 1;
     }
-    if (get_val(HID_STICK_2_X) == -5) {  // N
+    if (get_val(HID_STICK_2_X) == -6) {  // N
         brakeNotch = 0;
     }
     
@@ -157,16 +157,16 @@ main {
     if (get_val(HID_STICK_2_Y) == 1) {  // N
         powerNotch = 0;
     }
-    if (get_val(HID_STICK_2_Y) == -14) {  // P1
+    if (get_val(HID_STICK_2_Y) == -15) {  // P1
         powerNotch = 1;
     }
-    if (get_val(HID_STICK_2_Y) == -34) {  // P2
+    if (get_val(HID_STICK_2_Y) == -35) {  // P2
         powerNotch = 2;
     }
-    if (get_val(HID_STICK_2_Y) == -50) {  // P3
+    if (get_val(HID_STICK_2_Y) == -51) {  // P3
         powerNotch = 3;
     }
-    if (get_val(HID_STICK_2_Y) == -74) {  // P4
+    if (get_val(HID_STICK_2_Y) == -75) {  // P4
         powerNotch = 4;
     }
     if (get_val(HID_STICK_2_Y) == -100) {  // P5
